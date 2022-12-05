@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Poppins&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    font-family: 'Inter', sans-serif;
+}
+
+:root{
+    --background-header: #0A0C0D;
+    --background-primary: #F8F9FA;
+    --color-subtittle: #212529;
+
+    --tittle2-weight: 600;
+    --tittle2-size: 1.5rem;
+
+    --text2-weight: 400;
+    --text2-size: .875rem;
+}
+
+body{
+    background-color: var(--background-primary);
+}
+
