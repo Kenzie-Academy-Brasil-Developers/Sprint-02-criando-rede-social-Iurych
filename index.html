@@ -4,47 +4,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./src/scripts/posts.js" defer></script>
+    <script src="./src/scripts/users.js" defer></script>
+    <script src="./src/scripts/index.js" defer></script>
     <link rel="stylesheet" href="./src/styles/index.css">
     <link rel="stylesheet" href="./src/styles/style.css">
     <title>Rede Social</title>
 </head>
 <body class="body-container">
-   <header class="body-header">
-    <img class="body-header--img" src="./src/assets/img/logo.svg" alt="logo">
-    <button>Sair</button>
-   </header>
-   <main class="main-container">
-    <section class="container-section">
+  
+   <div class="box-main">
+    <header class="body-header">
+        <img class="body-header--img" src="./src/assets/img/logo.svg" alt="logo">
+        <button>Sair</button>
+       </header>
+    <main class="main-container">
+    <!-- <section class="container-section"> -->
         <div class="container-section--header">
             <div class="section-header--box1">
                 <img src="./src/assets/img/user1.svg">
                 <div class="header-box">
                     <span>Samuel Leao</span>
                     <p>Front End Engineer</p>
+                   
                 </div>
                 
             </div>
             <div class="section-header--box2">
-                <input class = "header-imput" type="text" placeholder="Digitar título do post">
-                <input class = "header-imput" type="text" placeholder="Digitar descrição do post">
+                <input id="input-1" class = "header-imput" type="text" placeholder="Digitar título do post">
+                <input id="input-2" class = "header-imput" type="text" placeholder="Digitar descrição do post">
+                <button class="box2-btn">Postar</button>
             </div>
             
+            
         </div>
-        <aside class="container-suggetions">
-            <h2>Sugestões para você seguir</h2>
-            <ul>
-                <li>
-
-                </li>
-            </ul>
+        <aside class="container-suggetions aside1">
+            <div>            
+                <h2>Sugestões para você seguir</h2>
+                <ul class="box-sug">
+                    <li class="box-sug--card">
+                        <div class="box-sug--contents">
+                            <img src="./src/assets/img/user3.svg" alt="usuário">
+                            <div class="box-sug--description">
+                            <span>Carlos Lima</span>
+                            <p>UX e UI Designer</p>
+                        </div>
+                        </div>
+                        <button id="btn">seguindo</button>
+                    </li>
+                    <li class="box-sug--card">
+                        <div class="box-sug--contents">
+                            <img src="./src/assets/img/user6.svg" alt="usuário">
+                            <div class="box-sug--description">
+                            <span>Samuel Persuhn</span>
+                            <p> "Front end Engineer"</p>
+                        </div>
+                        </div>
+                        <button>Seguir</button>
+                    </li>
+                    <li class="box-sug--card">
+                        <div class="box-sug--contents">
+                            <img src="./src/assets/img/user7.svg" alt="usuário">
+                            <div class="box-sug--description">
+                            <span>Filipe Gutierry</span>
+                            <p>"Back end Engineer"</p>
+                        </div>
+                        </div>
+                        <button>Seguir</button>
+                    </li>
+                </ul>
+            </div>
         </aside>
-        <ul>
-            <li>
-
-            </li>
+        <ul class="container-posts">
+            <h3 class="post-header">Posts</h3>
+            
         </ul>
-    </section>
+    <!-- </section>
+     -->
     
    </main>
+   <aside class="container-suggetions aside2">
+    <div>            
+        <h2>Sugestões para você seguir</h2>
+        <ul class="box-sug">
+            <li class="box-sug--card">
+                <div class="box-sug--contents">
+                    <img src="./src/assets/img/user3.svg" alt="usuário">
+                    <div class="box-sug--description">
+                    <span>Carlos Lima</span>
+                    <p>UX e UI Designer</p>
+                </div>
+                </div>
+                <button id="btn">seguindo</button>
+            </li>
+            <li class="box-sug--card">
+                <div class="box-sug--contents">
+                    <img src="./src/assets/img/user6.svg" alt="usuário">
+                    <div class="box-sug--description">
+                    <span>Samuel Persuhn</span>
+                    <p> "Front end Engineer"</p>
+                </div>
+                </div>
+                <button>Seguir</button>
+            </li>
+            <li class="box-sug--card">
+                <div class="box-sug--contents">
+                    <img src="./src/assets/img/user7.svg" alt="usuário">
+                    <div class="box-sug--description">
+                    <span>Filipe Gutierry</span>
+                    <p>"Back end Engineer"</p>
+                </div>
+                </div>
+                <button>Seguir</button>
+            </li>
+        </ul>
+    </div>
+
+   </aside>
+</div>
+
+<dialog class="container__modal">
+
+</dialog>
+
+   
 </body>
 </html>

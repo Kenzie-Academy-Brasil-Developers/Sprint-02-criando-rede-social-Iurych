@@ -12,16 +12,27 @@
 :root{
     --background-header: #0A0C0D;
     --background-primary: #F8F9FA;
+    --grey-scale1: #212529;
+    --grey-scale2: #495057;
+    --grey-scale4: #DEE2E6;
     --color-subtittle: #212529;
+
+    --hover-blue: #4263EB;
+
+    --tittle1-weight: 700;
+    --tittle1-seize: 1.75rem;
 
     --tittle2-weight: 600;
     --tittle2-size: 1.5rem;
 
     --text2-weight: 400;
     --text2-size: .875rem;
+
+    --text-colorButton: #868E96;
+    --text-color: #FFFFFF;
+    --color-button: #DEE2E6;
 }
 
 body{
     background-color: var(--background-primary);
 }
-
