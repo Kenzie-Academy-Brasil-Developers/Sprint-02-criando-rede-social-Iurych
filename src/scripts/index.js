@@ -9,28 +9,28 @@ function createCard(array, arr) {
             if (array[i].user == arr[j].id) {
 
                 let li = document.createElement('li')
-                let divA = document.createElement('div')
-                let imgA = document.createElement('img')
-                let divB = document.createElement('div')
-                let spanA = document.createElement('span')
-                let pA = document.createElement('p')
-                let divC = document.createElement('div')
-                let h2 = document.createElement('h2')
-                let pB = document.createElement('p')
-                let divD = document.createElement('div')
+                let boxCabecalho = document.createElement('div')
+                let picutre = document.createElement('img')
+                let description = document.createElement('div')
+                let userName = document.createElement('span')
+                let job = document.createElement('p')
+                let card = document.createElement('div')
+                let title = document.createElement('h2')
+                let content = document.createElement('p')
+                let footer = document.createElement('div')
                 let button = document.createElement('button')
-                let imgB = document.createElement('img')
-                let spanB = document.createElement('span')
+                let heart = document.createElement('img')
+                let likes = document.createElement('span')
 
 
                 li.classList.add('container-posts--list')
-                divA.classList.add('post-list--header')
-                imgA.classList.add('post-list--img')
-                divB.classList.add('post-list--descriptions')
-                divC.classList.add('post-list--body')
-                divD.classList.add('post-list--footer')
+                boxCabecalho.classList.add('post-list--header')
+                picutre.classList.add('post-list--img')
+                description.classList.add('post-list--descriptions')
+                card.classList.add('post-list--body')
+                footer.classList.add('post-list--footer')
                 button.classList.add('list-footer--button')
-                imgB.classList.add('list-footer--img')
+                heart.classList.add('list-footer--img')
 
                 button.addEventListener('click', () => {
                     const modal = document.querySelector('.container__modal')
@@ -44,23 +44,23 @@ function createCard(array, arr) {
 
                 })
 
-                spanA.innerText = arr[j].user
-                pA.innerText = arr[j].stack
-                h2.innerText = array[i].title
-                pB.innerText = array[i].text
+                userName.innerText = arr[j].user
+                job.innerText = arr[j].stack
+                title.innerText = array[i].title
+                content.innerText = array[i].text
                 button.innerText = "Abrir Post"
-                imgA.src = arr[j].img
-                imgB.src = "./src/assets/img/Vector.png"
-                spanB.innerText = "25"
+                picutre.src = arr[j].img
+                heart.src = "./src/assets/img/Vector.png"
+                likes.innerText = "25"
 
-                divB.append(spanA, pA)
-                divA.append(imgA, divB)
+                description.append(userName, job)
+                boxCabecalho.append(picutre, description)
 
-                divC.append(h2, pB)
+                card.append(title, content)
 
-                divD.append(button, imgB, spanB)
+                footer.append(button, heart, likes)
 
-                li.append(divA, divC, divD)
+                li.append(boxCabecalho, card, footer)
 
                 card.append(li)
             }
@@ -71,47 +71,47 @@ function createCard(array, arr) {
 
 function createModal(post, user){
    
-    let span_a = document.createElement('span')
+    let closer = document.createElement('span')
     
-    let div_a = document.createElement('div')
+    let modalHeader = document.createElement('div')
     let img = document.createElement('img')
-    let div_b = document.createElement('div')
-    let span_b = document.createElement('span')
-    let p_a = document.createElement('p')
-    let div_c = document.createElement('div')
-    let h2 = document.createElement('h2')
-    let p_b = document.createElement('p')
+    let modalBox = document.createElement('div')
+    let nameUser = document.createElement('span')
+    let job = document.createElement('p')
+    let footer = document.createElement('div')
+    let title = document.createElement('h2')
+    let content = document.createElement('p')
     
-    span_a.classList.add('closer-modal')
-    span_a.innerText = 'X'
-    span_a.addEventListener('click', () => {
+    closer.classList.add('closer-modal')
+    closer.innerText = 'X'
+    closer.addEventListener('click', () => {
         document.querySelector('.container__modal').innerHTML = ''
         document.querySelector('.container__modal').close()
         
     })
 
-    div_a.classList.add('modal-header')
+    modalHeader.classList.add('modal-header')
         
     img.src = user.img
     img.classList.add('post-list--img')
 
-    div_b.classList.add('modal-body')    
+    modalBox.classList.add('modal-body')    
     
-    span_b.innerText = user.user
+    nameUser.innerText = user.user
 
-    p_a.innerText = user.stack
+    job.innerText = user.stack
 
-    div_c.classList.add('modal-footer')    
+    footer.classList.add('modal-footer')    
 
-    h2.innerText = post.title
+    title.innerText = post.title
 
-    p_b.innerText = post.text
+    content.innerText = post.text
 
-    div_a.append(img, div_b)
-    div_b.append(span_b, p_a)
-    div_c.append(h2, p_b)
+    modalHeader.append(img, modalBox)
+    modalBox.append(nameUser, job)
+    footer.append(title, content)
     
-    document.querySelector('.container__modal').append(span_a, div_a, div_c) 
+    document.querySelector('.container__modal').append(closer, modalHeader, footer) 
 
 }
 
